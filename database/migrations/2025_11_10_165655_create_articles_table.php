@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('date');
             $table->foreignId('writer_id')->constrained('writers')->onDelete('cascade');
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->boolean('is_popular')->default(false);
             $table->timestamps();
         });
     }

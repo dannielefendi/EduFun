@@ -16,7 +16,7 @@ class ArticleSeeder extends Seeder
     {
         //
 
-        $faker = Faker::create();
+        $faker = Faker::create('id_ID');
 
         foreach(range(1,10) as $index){
             Article::create([
@@ -25,6 +25,7 @@ class ArticleSeeder extends Seeder
                 'date' => $faker->date(),
                 'writer_id' => $faker->numberBetween(1, 5),
                 'category_id' => $faker->numberBetween(1, 4),
+                'is_popular' => $faker->boolean(70), // 70% artikel akan diberi status populer
             ]);
         }
     }

@@ -50,7 +50,7 @@
 
         {{-- Popular --}}
         <li class="nav-item">
-          <a class="nav-link {{ request()->routeIs('popular.*') ? 'active' : '' }}" href="#">Popular</a>
+          <a class="nav-link {{ request()->routeIs('popular.*') ? 'active' : '' }}" href="{{ route('popular.index') }}">Popular</a>
         </li>
 
       </ul>

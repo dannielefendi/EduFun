@@ -16,7 +16,7 @@ class WriterSeeder extends Seeder
     {
         //
 
-        $faker = Faker::create();
+        $faker = Faker::create('id_ID');
 
         foreach(range(1,5) as $index){
             Writer::create([

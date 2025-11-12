@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PopularController;
 use App\Http\Controllers\WriterController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::get('/writer/{id}', [WriterController::class, 'show'])->name('writer.deta
 Route::get('/about', function(){
     return view('menu.about');
 })->name('about.info');
+
+Route::get('/popular', [PopularController::class, 'index'])->name('popular.index');
